@@ -1,0 +1,16 @@
+<div class="card">
+  <h4 class="card-header">Add new chem</h4>
+  <div class="card-body">
+    <form class="form-inline" [formGroup]="addChemForm" (ngSubmit)="addChem()">
+      <input class="form-control mr-2" type="text" name="name"
+             formControlName="name" placeholder="Name">
+      <input class="form-control mr-2" type="text" name="type"
+             formControlName="type" placeholder="Type" min="0">
+      <input class="form-control mr-2" type="number" name="weight"
+             formControlName="weight" placeholder="Weight" step="any" min="0">
+      <button class="btn btn-primary" type="submit" [disabled]="!addChemForm.valid">
+        <i class="fa fa-plus"></i> Add
+      </button>
+    </form>
+  </div>
+</div>
