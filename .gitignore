@@ -47,3 +47,4 @@ Thumbs.db
 
 # MongoDB
 /data
+.vscode/settings.json
