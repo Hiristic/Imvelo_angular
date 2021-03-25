@@ -41,7 +41,7 @@ describe('Chems', () => {
     });
 
     it('should create new chem', done => {
-      const chem = new Chem({ name: 'Fluffy', weight: 4, age: 2 });
+      const chem = new Chem({ name: 'Fluffy', weight: 4, type: 'Dangerous' });
       chai.request(app)
         .post('/api/chem')
         .send(chem)
@@ -50,13 +50,13 @@ describe('Chems', () => {
           res.body.should.be.a('object');
           res.body.should.have.a.property('name');
           res.body.should.have.a.property('weight');
-          res.body.should.have.a.property('age');
+          res.body.should.have.a.property('type');
           done();
         });
     });
 
     it('should get a chem by its id', done => {
-      const chem = new Chem({ name: 'Chem', weight: 2, age: 4 });
+      const chem = new Chem({ name: 'Chem', weight: 2, type: 'Danger' });
       chem.save((error, newChem) => {
         chai.request(app)
           .get(`/api/chem/${newChem.id}`)
@@ -65,7 +65,7 @@ describe('Chems', () => {
             res.body.should.be.a('object');
             res.body.should.have.property('name');
             res.body.should.have.property('weight');
-            res.body.should.have.property('age');
+            res.body.should.have.property('type');
             res.body.should.have.property('_id').eql(newChem.id);
             done();
           });
@@ -73,7 +73,7 @@ describe('Chems', () => {
     });
 
     it('should update a chem by its id', done => {
-      const chem = new Chem({ name: 'Chem', weight: 2, age: 4 });
+      const chem = new Chem({ name: 'Chem', weight: 2, type: 'Danger' });
       chem.save((error, newChem) => {
         chai.request(app)
           .put(`/api/chem/${newChem.id}`)
@@ -86,7 +86,7 @@ describe('Chems', () => {
     });
 
     it('should delete a chem by its id', done => {
-      const chem = new Chem({ name: 'Chem', weight: 2, age: 4 });
+      const chem = new Chem({ name: 'Chem', weight: 2, type: 'Danger' });
       chem.save((error, newChem) => {
         chai.request(app)
           .del(`/api/chem/${newChem.id}`)

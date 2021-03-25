@@ -91,7 +91,7 @@ describe('Component: Chems', () => {
     expect(formEl).toBeTruthy();
     const [inputName, inputType, inputWeight] = fixture.debugElement.queryAll(By.css('input'));
     expect(inputName.nativeElement.value).toContain('Chem 1');
-    expect(inputType.nativeElement.value).toContain('1');
+    expect(inputType.nativeElement.value).toContain('deadly');
     expect(inputWeight.nativeElement.value).toContain('2');
     const [btnSave, btnCancel] = fixture.debugElement.queryAll(By.css('button'));
     expect(btnSave.nativeElement).toBeTruthy();
