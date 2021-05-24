@@ -1,4 +1,4 @@
-# Angular Full Stack 
+# Imvelo prototype 
 [![](https://github.com/Hiristic/Imvelo/workflows/Build/badge.svg)](https://github.com/Hiristic/Imvelo/actions?query=workflow%3ABuild) [![](https://github.com/Hiristic/Imvelo/workflows/Tests/badge.svg)](https://github.com/Hiristic/Imvelo/actions?query=workflow%3ATests) [![Dependencies](https://david-dm.org/Hiristic/Imvelo.svg)](https://david-dm.org/Hiristic/Imvelo) 
 
 Angular Full Stack is a project to easly get started with the latest Angular using a real backend and database. Whole stack is in TypeScript, from frontend to backend, giving you the advantage to code in one single language throughout the all stack.
