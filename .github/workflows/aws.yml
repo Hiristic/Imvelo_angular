@@ -79,5 +79,5 @@ jobs:
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: app
-        cluster: default
+        cluster: imvelo-cluster
         wait-for-service-stability: true
